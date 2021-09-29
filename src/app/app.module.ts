@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PosesComponent } from './components/poses/poses.component';
 import { PoseDetailComponent } from './components/pose-detail/pose-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MessagesComponent } from './components/messages/messages.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
