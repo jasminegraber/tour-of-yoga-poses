@@ -1,10 +1,19 @@
-<div role="main">
-    <h2>{{ pose.sanskritName }}</h2>
-    <p class="english-name">{{ pose.englishName }}</p>
 
-    <label for="name">Sanskrit pose name:</label>
-    <input type="text"
-    id="name"
-    [(ngModel)]="pose.sanskritName"
-    placeholder="name">
-</div>
+<section role="main">
+
+    <div>
+        <h2>Great Poses</h2>
+        <ul class="poses">
+            <li 
+            *ngFor="let pose of poses"
+            [class.selected]="pose === selectedPose"
+            (click)="onSelect(pose)"
+            >
+                <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
+            </li>
+        </ul>
+    </div>
+
+    <app-pose-detail [pose]="selectedPose"></app-pose-detail>
+
+</section>

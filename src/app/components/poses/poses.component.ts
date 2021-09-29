@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pose } from 'src/app/Pose';
+import { POSES } from 'src/app/mock-poses';
 
 @Component({
   selector: 'app-poses',
@@ -8,15 +9,16 @@ import { Pose } from 'src/app/Pose';
 })
 export class PosesComponent implements OnInit {
 
-  pose: Pose = {
-    id: 1,
-    englishName: 'Corpse Pose',
-    sanskritName: 'Savasana'
-  };
+  poses = POSES;
+  selectedPose?: Pose;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelect(pose: Pose): void {
+    this.selectedPose = pose;
   }
 
 }

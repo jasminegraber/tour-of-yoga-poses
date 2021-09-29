@@ -10,5 +10,5 @@ export const POSES: Pose[] = [
     {id: 7, englishName: 'Triangle Pose', sanskritName: 'Utthita Trikonasana'},
     {id: 8, englishName: 'Half Forward Bend Pose', sanskritName: 'Ardha Uttanasana'},
     {id: 9, englishName: 'Tree Pose', sanskritName: 'Vrksasana'},
-    {id: 10, englishName: 'Bridge Pose', sanskritName: 'Setu Bandha Sarvangasana'},
+    {id: 10, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana'},
 ];
