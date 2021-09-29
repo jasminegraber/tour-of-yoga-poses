@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pose } from 'src/app/Pose';
 import { POSES } from 'src/app/mock-poses';
+import { PoseService } from 'src/app/services/pose.service';
 
 @Component({
   selector: 'app-poses',
@@ -9,16 +10,22 @@ import { POSES } from 'src/app/mock-poses';
 })
 export class PosesComponent implements OnInit {
 
-  poses = POSES;
+  poses: Pose[] = [];
   selectedPose?: Pose;
 
-  constructor() { }
+  constructor(private poseService: PoseService) { }
 
   ngOnInit(): void {
+    this.getPoses();
   }
 
   onSelect(pose: Pose): void {
     this.selectedPose = pose;
+  }
+
+  getPoses(): void {
+    this.poseService.getPoses()
+        .subscribe(poses => this.poses = poses);
   }
 
 }
