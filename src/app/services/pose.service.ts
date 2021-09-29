@@ -16,4 +16,10 @@ export class PoseService {
     this.messageService.add('PoseService: fetched poses');
     return poses;
   }
+
+  getPose(id: number): Observable<Pose> {
+    const pose = POSES.find(p => p.id === id)!;
+    this.messageService.add(`PoseService: fetched pose id=${id}`);
+    return of(pose);
+  }
 }

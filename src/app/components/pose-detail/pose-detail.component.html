@@ -10,8 +10,13 @@
         <label for="pose-sanskrit">Sanskrit name: </label>
         <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="name">
     </div>
+
     <div>
         <label for="pose-english">English name: </label>
         <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="name">
+    </div>
+
+    <div>
+        <button (click)="goBack()">go back</button>
     </div>
 </div>

@@ -8,6 +8,7 @@ import { PosesComponent } from './components/poses/poses.component';
 import { PoseDetailComponent } from './components/pose-detail/pose-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     PosesComponent,
     PoseDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

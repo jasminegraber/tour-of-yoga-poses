@@ -4,16 +4,14 @@
     <div>
         <h2>Great Poses</h2>
         <ul class="poses">
-            <li 
-            *ngFor="let pose of poses"
-            [class.selected]="pose === selectedPose"
-            (click)="onSelect(pose)"
-            >
-                <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
+            <li *ngFor="let pose of poses">
+                <a routerLink="/detail/{{pose.id}}">
+                    <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
+                </a>
             </li>
         </ul>
     </div>
 
-    <app-pose-detail [pose]="selectedPose"></app-pose-detail>
+    <!-- <app-pose-detail [pose]="selectedPose"></app-pose-detail> -->
 
 </section>
