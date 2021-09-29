@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,500&family=Fira+Sans:wght@900&family=Overpass&display=swap');
+
+h1,
+h2 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.subtitle {
+    font-family: 'Cormorant', serif;
+    font-size: 2em;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    max-width: 960px;
+    margin: auto;
+}

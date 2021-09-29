@@ -1,0 +1,14 @@
+.english-name {
+    font-family: 'Cormorant', serif;
+    font-size: 1.5em;
+}
+
+h2,
+.english-name {
+    margin: 0;
+}
+
+div {
+    text-align: center;
+    margin-top: 100px;
+}
