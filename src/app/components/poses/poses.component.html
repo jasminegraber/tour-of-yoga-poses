@@ -1,4 +1,10 @@
 <div role="main">
     <h2>{{ pose.sanskritName }}</h2>
     <p class="english-name">{{ pose.englishName }}</p>
+
+    <label for="name">Sanskrit pose name:</label>
+    <input type="text"
+    id="name"
+    [(ngModel)]="pose.sanskritName"
+    placeholder="name">
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pose } from 'src/Pose';
+import { Pose } from 'src/app/Pose';
 
 @Component({
   selector: 'app-poses',
