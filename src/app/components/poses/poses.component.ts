@@ -25,9 +25,23 @@ export class PosesComponent implements OnInit {
     this.messageService.add(`PosesComponent: Selected component id=${pose.id}`)
   }
 
+  create(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.poseService.create({ name } as unknown as Pose)
+      .subscribe(pose => {
+        this.poses.push(pose);
+      });
+  }
+
   getPoses(): void {
     this.poseService.getPoses()
         .subscribe(poses => this.poses = poses);
+  }
+
+  delete(pose: Pose): void {
+    this.poses = this.poses.filter(h => h !== pose);
+    this.poseService.delete(pose.id).subscribe();
   }
 
 }

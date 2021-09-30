@@ -8,9 +8,22 @@
                 <a routerLink="/detail/{{pose.id}}">
                     <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
                 </a>
+                <button 
+                class="delete" title="delete pose"
+                (click)="delete(pose)">x</button>
             </li>
         </ul>
     </div>
+
+    <div>
+        <label for="new-pose">English name: </label>
+        <input id="new-pose" #poseName />
+      
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button class="add-button" (click)="create(poseName.value); poseName.value=''">
+          Add pose
+        </button>
+      </div>
 
     <!-- <app-pose-detail [pose]="selectedPose"></app-pose-detail> -->
 

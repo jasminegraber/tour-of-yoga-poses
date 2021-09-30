@@ -34,4 +34,11 @@ export class PoseDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    if (this.pose) {
+      this.poseService.updatePose(this.pose)
+        .subscribe(() => this.goBack());
+    }
+  }
+
 }
