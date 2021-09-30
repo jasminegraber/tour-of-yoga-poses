@@ -14,6 +14,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
+import { PoseSearchComponent } from './components/pose-search/pose-search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavComponent } from './components/nav/nav.component';
     PoseDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    PoseSearchComponent
   ],
   imports: [
     HttpClientModule,

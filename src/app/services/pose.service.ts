@@ -21,13 +21,27 @@ export class PoseService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** POST: add a new hero to the server */
+  /** POST: add a new pose to the server */
   create(pose: Pose): Observable<Pose> {
     return this.http.post<Pose>(this.posesUrl, pose, this.httpOptions).pipe(
       tap((newPose: Pose) => this.log(`added pose w/ id=${newPose.id}`)),
       catchError(this.handleError<Pose>('addPose'))
     );
   }
+
+  /* GET pose whose name contains search term */
+searchPoses(term: string): Observable<Pose[]> {
+  if (!term.trim()) {
+    // if not search term, return empty pose array.
+    return of([]);
+  }
+  return this.http.get<Pose[]>(`${this.posesUrl}/?name=${term}`).pipe(
+    tap(x => x.length ?
+       this.log(`found poses matching "${term}"`) :
+       this.log(`no poses matching "${term}"`)),
+    catchError(this.handleError<Pose[]>('searchPoses', []))
+  );
+}
 
   getPoses(): Observable<Pose[]> {
     return this.http.get<Pose[]>(this.posesUrl)
