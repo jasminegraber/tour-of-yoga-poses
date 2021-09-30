@@ -3,7 +3,7 @@ a[routerLink="/poses"] {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
     nav {
         display: flex;
@@ -11,7 +11,7 @@ a[routerLink="/poses"] {
     }
 
     a[routerLink="/poses"] {
-        margin: 0;
+        margin: 30px;
     }
 
 }

@@ -5,7 +5,9 @@ h1,
 
 header {
     display: flex;
-    margin-top: 30px;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -13,5 +15,9 @@ header {
     header {
         flex-direction: column;
         text-align: center;
+    }
+
+    .header-text {
+        margin-bottom: 40px;
     }
 }

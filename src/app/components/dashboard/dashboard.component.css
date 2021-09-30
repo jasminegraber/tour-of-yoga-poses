@@ -1,0 +1,52 @@
+a {
+    display: block;
+}
+
+.sanskrit-name {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.25em;
+    
+}
+
+.english-name {
+    font-family: 'Cormorant', serif;
+    font-size: 1.25em;
+}
+
+.pose-container {
+    
+    padding: 50px;
+    background-color: #EEE;
+    border-radius: 30px;
+    text-align: center;
+    width: 40%;
+    margin: 1%;
+}
+
+.dashboard-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    max-width: 75%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 769px) {
+
+    .pose-container {
+        
+        width: 100%;
+    }
+/* 
+    .pose-container {
+        max-width: 5%;
+    } */
+}

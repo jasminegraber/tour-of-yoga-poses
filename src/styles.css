@@ -38,6 +38,6 @@ body {
 
 * {
     box-sizing: border-box;
-    max-width: 960px;
-    margin: auto;
+    /* max-width: 100%;
+    margin: auto; */
 }

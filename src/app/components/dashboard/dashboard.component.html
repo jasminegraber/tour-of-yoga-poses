@@ -1,11 +1,18 @@
 <section role="main">
+
   <h2>Favorite Poses</h2>
-  <div>
-      <a *ngFor="let pose of poses"
-      routerLink="/detail/{{pose.id}}">
-          {{ pose.sanskritName }}
+  <div class="dashboard-container">
+    <div *ngFor="let pose of poses" class="pose-container">
+      <p class="sanskrit-name">{{ pose.sanskritName }}</p>
+      
+      
+        <a 
+        routerLink="/detail/{{pose.id}}" class="english-name">
+        {{ pose.englishName }}
         </a>
+    </div>
   </div>
 
-  <app-pose-search></app-pose-search>
+  <!-- <app-pose-search></app-pose-search> -->
+
 </section>

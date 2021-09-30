@@ -8,14 +8,15 @@ import { Pose } from '../Pose';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const poses = [
-      {id: 1, englishName: 'Corpse Pose', sanskritName: 'Savasana'},
-      {id: 2, englishName: 'Downward Facing Dog Pose', sanskritName: 'Adho Mukha Svanasana'},
-      {id: 3, englishName: 'Mountain Pose', sanskritName: 'Tadasana'},
-      {id: 4, englishName: 'Warrior I Pose', sanskritName: 'Virabhadrasana I'},
-      {id: 5, englishName: 'Warrior II Pose', sanskritName: 'Virabhadrasana II'},
-      {id: 6, englishName: 'Extended Side Angle Pose', sanskritName: 'Utthita Parvakonasana'},
-      {id: 7, englishName: 'Triangle Pose', sanskritName: 'Utthita Trikonasana'},
-      {id: 8, englishName: 'Half Forward Bend Pose', sanskritName: 'Ardha Uttanasana'},
+      {id: 3, englishName: 'Mountain', sanskritName: 'Tadasana'},
+      {id: 13, englishName: 'Raised Hands', sanskritName: 'Urdhva Hastasana'},
+      {id: 1, englishName: 'Forward Bend', sanskritName: 'Uttanasana'},
+      {id: 8, englishName: 'Half Forward Bend', sanskritName: 'Ardha Uttanasana'},
+      {id: 2, englishName: 'Plank', sanskritName: 'Phalakasana'},
+      {id: 4, englishName: 'Four-Limbed Staff', sanskritName: 'Chaturanga Dandasana'},
+      {id: 5, englishName: 'Upward Facing Dog', sanskritName: 'Urdhva Mukha Svanasana'},
+      {id: 6, englishName: 'Downward Facing Dog', sanskritName: 'Adho Mukha Svanasana'},
+      {id: 7, englishName: 'Child\'s', sanskritName: 'Balasana'},
       {id: 9, englishName: 'Tree Pose', sanskritName: 'Vrksasana'},
       {id: 10, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana'},
   ];
