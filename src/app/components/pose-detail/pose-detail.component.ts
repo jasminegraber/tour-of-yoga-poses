@@ -13,6 +13,7 @@ import { PoseService } from 'src/app/services/pose.service';
 export class PoseDetailComponent implements OnInit {
 
   @Input() pose?: Pose;
+  @Input() contentEditable?: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,6 +39,14 @@ export class PoseDetailComponent implements OnInit {
     if (this.pose) {
       this.poseService.updatePose(this.pose)
         .subscribe(() => this.goBack());
+    }
+  }
+
+  toggleEditable(event: any) {
+    if (event.target.checked) {
+      this.contentEditable = true;
+    } else {
+      this.contentEditable = false;
     }
   }
 

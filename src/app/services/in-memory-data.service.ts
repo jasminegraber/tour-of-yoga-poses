@@ -8,16 +8,16 @@ import { Pose } from '../Pose';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const poses = [
-      {id: 1, englishName: 'Corpse Pose', sanskritName: 'Savasana'},
-      {id: 2, englishName: 'Downward Dog Pose', sanskritName: 'Adho Mukha Svanasana'},
-      {id: 3, englishName: 'Mountain Pose', sanskritName: 'Tadasana'},
-      {id: 4, englishName: 'Warrior I Pose', sanskritName: 'Virabhadrasana I'},
-      {id: 5, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana'},
-      {id: 6, englishName: 'Warrior II Pose', sanskritName: 'Virabhadrasana II'},
-      {id: 7, englishName: 'Extended Side Angle Pose', sanskritName: 'Utthita Parvakonasana'},
-      {id: 8, englishName: 'Triangle Pose', sanskritName: 'Utthita Trikonasana'},
-      {id: 9, englishName: 'Half Forward Bend Pose', sanskritName: 'Ardha Uttanasana'},
-      {id: 10, englishName: 'Tree Pose', sanskritName: 'Vrksasana'},
+      {id: 1, englishName: 'Corpse Pose', sanskritName: 'Savasana', favorite: true},
+      {id: 2, englishName: 'Downward Dog Pose', sanskritName: 'Adho Mukha Svanasana', favorite: false},
+      {id: 3, englishName: 'Mountain Pose', sanskritName: 'Tadasana', favorite: true},
+      {id: 4, englishName: 'Warrior I Pose', sanskritName: 'Virabhadrasana I', favorite: false},
+      {id: 5, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana', favorite: true},
+      {id: 6, englishName: 'Warrior II Pose', sanskritName: 'Virabhadrasana II', favorite: true},
+      {id: 7, englishName: 'Extended Side Angle Pose', sanskritName: 'Utthita Parvakonasana', favorite: false},
+      {id: 8, englishName: 'Triangle Pose', sanskritName: 'Utthita Trikonasana', favorite: true},
+      {id: 9, englishName: 'Half Forward Bend Pose', sanskritName: 'Ardha Uttanasana', favorite: true},
+      {id: 10, englishName: 'Tree Pose', sanskritName: 'Vrksasana', favorite: false},
       
   ];
     return {poses};

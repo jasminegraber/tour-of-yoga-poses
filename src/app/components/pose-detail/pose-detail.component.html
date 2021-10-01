@@ -4,6 +4,9 @@
         <h2>Pose Details</h2>
         <p>Sanskrit: {{ pose.sanskritName }}</p>
         <p>English: {{ pose.englishName }}</p>
+        <p *ngIf="contentEditable">LOVE</p>
+        <label for="favorite-pose"></label>
+        <input id="favorite-pose" type="checkbox" (change)="toggleEditable($event)">
     </div>
     
     <div>
