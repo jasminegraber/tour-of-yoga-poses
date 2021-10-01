@@ -9,7 +9,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const poses = [
       {id: 1, englishName: 'Corpse Pose', sanskritName: 'Savasana'},
-      {id: 2, englishName: 'Downward Facing Dog Pose', sanskritName: 'Adho Mukha Svanasana'},
+      {id: 2, englishName: 'Downward Dog Pose', sanskritName: 'Adho Mukha Svanasana'},
       {id: 3, englishName: 'Mountain Pose', sanskritName: 'Tadasana'},
       {id: 4, englishName: 'Warrior I Pose', sanskritName: 'Virabhadrasana I'},
       {id: 5, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana'},

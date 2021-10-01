@@ -16,11 +16,13 @@
     </div>
 
     <div>
-        <label for="new-pose">English name: </label>
-        <input id="new-pose" #poseName />
+        <label for="english-name">English name: </label>
+        <input id="english-name" #englishName />
+        <label for="sanskrit-name">Sanskrit name: </label>
+        <input id="sanskrit-name" #sanskritName />
       
         <!-- (click) passes input value to add() and then clears the input -->
-        <button class="add-button" (click)="create(poseName.value); poseName.value=''">
+        <button class="add-button" (click)="create(sanskritName.value, englishName.value); englishName.value=''; sanskritName.value=''">
           Add pose
         </button>
       </div>

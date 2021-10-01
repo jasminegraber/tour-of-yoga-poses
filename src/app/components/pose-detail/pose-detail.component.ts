@@ -8,7 +8,7 @@ import { PoseService } from 'src/app/services/pose.service';
 @Component({
   selector: 'app-pose-detail',
   templateUrl: './pose-detail.component.html',
-  styleUrls: ['./pose-detail.component.css']
+  styleUrls: ['./pose-detail.component.scss']
 })
 export class PoseDetailComponent implements OnInit {
 

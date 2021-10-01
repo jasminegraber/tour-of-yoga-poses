@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Pose } from '../Pose';
-import { POSES } from '../mock-poses';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 
@@ -30,18 +29,18 @@ export class PoseService {
   }
 
   /* GET pose whose name contains search term */
-searchPoses(term: string): Observable<Pose[]> {
-  if (!term.trim()) {
-    // if not search term, return empty pose array.
-    return of([]);
+  searchPoses(term: string): Observable<Pose[]> {
+    if (!term.trim()) {
+      // if not search term, return empty pose array.
+      return of([]);
+    }
+    return this.http.get<Pose[]>(`${this.posesUrl}/?name=${term}`).pipe(
+      tap(x => x.length ?
+        this.log(`found poses matching "${term}"`) :
+        this.log(`no poses matching "${term}"`)),
+      catchError(this.handleError<Pose[]>('searchPoses', []))
+    );
   }
-  return this.http.get<Pose[]>(`${this.posesUrl}/?name=${term}`).pipe(
-    tap(x => x.length ?
-       this.log(`found poses matching "${term}"`) :
-       this.log(`no poses matching "${term}"`)),
-    catchError(this.handleError<Pose[]>('searchPoses', []))
-  );
-}
 
   getPoses(): Observable<Pose[]> {
     return this.http.get<Pose[]>(this.posesUrl)
@@ -49,7 +48,7 @@ searchPoses(term: string): Observable<Pose[]> {
         tap(_ => this.log('fetched poses')),
         catchError(this.handleError<Pose[]>('getPoses', []))
       );
-}
+  }
 
   /** GET Pose by id. Will 404 if id not found */
   getPose(id: number): Observable<Pose> {
@@ -58,7 +57,7 @@ searchPoses(term: string): Observable<Pose[]> {
       tap(_ => this.log(`fetched pose id=${id}`)),
       catchError(this.handleError<Pose>(`getPose id=${id}`))
     );
-}
+  }
 
 /** PUT: update the pose on the server */
   updatePose(pose: Pose): Observable<any> {
@@ -66,7 +65,7 @@ searchPoses(term: string): Observable<Pose[]> {
       tap(_ => this.log(`updated pose id=${pose.id}`)),
       catchError(this.handleError<any>('updatePose'))
     );
-}
+  }
 
   /** DELETE: delete the pose from the server */
   delete(id: number): Observable<Pose> {
@@ -75,8 +74,8 @@ searchPoses(term: string): Observable<Pose[]> {
     return this.http.delete<Pose>(url, this.httpOptions).pipe(
       tap(_ => this.log(`deleted pose id=${id}`)),
       catchError(this.handleError<Pose>('deletePose'))
-  );
-}
+    );
+  }
 
   /**
  * Handle Http operation that failed.

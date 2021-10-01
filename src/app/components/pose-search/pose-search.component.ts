@@ -12,7 +12,7 @@ import { PoseService } from 'src/app/services/pose.service';
 @Component({
   selector: 'app-pose-search',
   templateUrl: './pose-search.component.html',
-  styleUrls: [ './pose-search.component.css' ]
+  styleUrls: [ './pose-search.component.scss' ]
 })
 export class PoseSearchComponent implements OnInit {
   poses$!: Observable<Pose[]>;
