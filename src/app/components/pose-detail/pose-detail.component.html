@@ -1,22 +1,28 @@
-<section *ngIf="pose" role="main">
+<section *ngIf="pose" role="main"
+        (dblclick)="onToggle(pose)">
 
-    <div>
+    <div class="pose-container">
         <h2>Pose Details</h2>
         <p>Sanskrit: {{ pose.sanskritName }}</p>
         <p>English: {{ pose.englishName }}</p>
-        <p *ngIf="contentEditable">LOVE</p>
-        <label for="favorite-pose"></label>
-        <input id="favorite-pose" type="checkbox" (change)="toggleEditable($event)">
+        <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }"></fa-icon>
     </div>
+
+
     
     <div>
         <label for="pose-sanskrit">Sanskrit name: </label>
-        <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="name">
+        <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="Sanskrit pose name">
     </div>
 
     <div>
         <label for="pose-english">English name: </label>
-        <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="name">
+        <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="English pose name">
+    </div>
+
+    <div>
+        <label for="pose-favorite">Favorite pose? </label>
+        <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite">
     </div>
 
     <div>

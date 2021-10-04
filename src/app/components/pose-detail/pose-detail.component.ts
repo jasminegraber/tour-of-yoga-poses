@@ -1,9 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pose } from 'src/app/Pose';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import { PoseService } from 'src/app/services/pose.service';
+
+;
 
 @Component({
   selector: 'app-pose-detail',
@@ -12,8 +15,11 @@ import { PoseService } from 'src/app/services/pose.service';
 })
 export class PoseDetailComponent implements OnInit {
 
-  @Input() pose?: Pose;
-  @Input() contentEditable?: boolean;
+  @Input() pose!: Pose;
+  @Output() onToggleFavorite: EventEmitter<Pose> = new EventEmitter();
+
+  faHeart = faHeart;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -42,12 +48,11 @@ export class PoseDetailComponent implements OnInit {
     }
   }
 
-  toggleEditable(event: any) {
-    if (event.target.checked) {
-      this.contentEditable = true;
-    } else {
-      this.contentEditable = false;
-    }
+  onToggle(pose: Pose) {
+    this.onToggleFavorite.emit(pose);
+    this.pose.favorite = !this.pose.favorite;
   }
+
+
 
 }

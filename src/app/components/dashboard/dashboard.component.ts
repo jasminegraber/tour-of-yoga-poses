@@ -19,7 +19,9 @@ export class DashboardComponent implements OnInit {
 
   getPoses(): void {
     this.poseService.getPoses()
-        .subscribe(poses => this.poses = poses.slice(1, 5));
+        .subscribe(poses => this.poses = 
+                  poses.filter (  pose => pose.favorite )
+          );
   }
 
 }
