@@ -3,6 +3,7 @@
 
     <div class="pose-container">
         <h2>Pose Details</h2>
+        <img [src]="'pose.favorite'" alt="" />
         <p>Sanskrit: {{ pose.sanskritName }}</p>
         <p>English: {{ pose.englishName }}</p>
         <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }"></fa-icon>

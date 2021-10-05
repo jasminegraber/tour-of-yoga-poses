@@ -3,4 +3,5 @@ export interface Pose {
     englishName: string;
     sanskritName: string;
     favorite: boolean;
+    photo: string;
   }
