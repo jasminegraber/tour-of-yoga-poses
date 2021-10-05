@@ -8,16 +8,16 @@ import { Pose } from '../Pose';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const poses = [
-      {id: 1, englishName: 'Corpse Pose', sanskritName: 'Savasana', favorite: true, photo: '../assets/images/balasana'},
-      {id: 2, englishName: 'Downward Dog Pose', sanskritName: 'Adho Mukha Svanasana', favorite: false, photo: '../assets/images/balasana'},
-      {id: 3, englishName: 'Mountain Pose', sanskritName: 'Tadasana', favorite: true, photo: '../assets/images/balasana'},
-      {id: 4, englishName: 'Child\'s Pose', sanskritName: 'Balasana', favorite: true, photo: '../assets/images/balasana'},
-      {id: 5, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana', favorite: true, photo: '../assets/images/balasana'},
-      {id: 6, englishName: 'Warrior II Pose', sanskritName: 'Virabhadrasana II', favorite: true, photo: '../assets/images/balasana'},
-      {id: 7, englishName: 'Garland Pose', sanskritName: 'Malasana', favorite: false, photo: '../assets/images/balasana'},
-      {id: 8, englishName: 'Triangle Pose', sanskritName: 'Utthita Trikonasana', favorite: true, photo: '../assets/images/balasana'},
-      {id: 9, englishName: 'Half Forward Bend Pose', sanskritName: 'Ardha Uttanasana', favorite: true, photo: '../assets/images/balasana'},
-      {id: 10, englishName: 'Tree Pose', sanskritName: 'Vrksasana', favorite: false, photo: '../assets/images/balasana'},
+      {id: 1, englishName: 'Corpse Pose', sanskritName: 'Savasana', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/CCD03475-scaled.jpg'},
+      {id: 2, englishName: 'Downward Dog Pose', sanskritName: 'Adho Mukha Svanasana', favorite: false, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2020/12/2hp_290_1721_bjk.jpg'},
+      {id: 3, englishName: 'Mountain Pose', sanskritName: 'Tadasana', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/Man-Doing-Mountain-Pose.jpg'},
+      {id: 4, englishName: 'Child\'s Pose', sanskritName: 'Balasana', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/CCD02240-scaled.jpg'},
+      {id: 5, englishName: 'Half Moon Pose', sanskritName: 'Ardha Chandrasana', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/2hp_291_1860_gn_bjk.jpg'},
+      {id: 6, englishName: 'Warrior II Pose', sanskritName: 'Virabhadrasana II', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/32hp_291_1870_gn_bjk.jpg'},
+      {id: 7, englishName: 'Garland Pose', sanskritName: 'Malasana', favorite: false, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/ccd03464.jpg'},
+      {id: 8, englishName: 'Triangle Pose', sanskritName: 'Utthita Trikonasana', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2007/08/CCD03592-scaled.jpg'},
+      {id: 9, englishName: 'Half Forward Bend Pose', sanskritName: 'Ardha Uttanasana', favorite: true, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2008/02/2hp_281_0176_bjk.jpg'},
+      {id: 10, englishName: 'Tree Pose', sanskritName: 'Vrksasana', favorite: false, imageSrc: 'https://www.yogajournal.com/wp-content/uploads/2020/12/ccd03542-1.jpg'},
       
   ];
     return {poses};

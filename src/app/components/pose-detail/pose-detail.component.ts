@@ -44,13 +44,14 @@ export class PoseDetailComponent implements OnInit {
   save(): void {
     if (this.pose) {
       this.poseService.updatePose(this.pose)
-        .subscribe(() => this.goBack());
+        .subscribe(); // () => this.goBack()
     }
   }
 
   onToggle(pose: Pose) {
     this.onToggleFavorite.emit(pose);
     this.pose.favorite = !this.pose.favorite;
+    this.save();
   }
 
 

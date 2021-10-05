@@ -1,3 +1,19 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,
+.pose-container {
+    text-align: center;
+}
+
+.pose-container {
+    padding: 30px;
+    user-select: none;
+}
 fa-icon {
     color: #FFF;
     display: block;
@@ -10,4 +26,8 @@ fa-icon {
 
 .pose-container {
     background-color: #EEE;
+}
+
+img {
+    max-width: 500px;
 }

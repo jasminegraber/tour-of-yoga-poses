@@ -1,33 +1,41 @@
-<section *ngIf="pose" role="main"
-        (dblclick)="onToggle(pose)">
+<section>
 
-    <div class="pose-container">
-        <h2>Pose Details</h2>
-        <img [src]="'pose.favorite'" alt="" />
-        <p>Sanskrit: {{ pose.sanskritName }}</p>
-        <p>English: {{ pose.englishName }}</p>
-        <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }"></fa-icon>
-    </div>
+    <div *ngIf="pose" role="main"
+        >
 
+        <div class="pose-container" (dblclick)="onToggle(pose)">
+            <h2>Pose Details</h2>
+            <p>Sanskrit: {{ pose.sanskritName }}</p>
+            <p>English: {{ pose.englishName }}</p>
+            <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose"></fa-icon>
+        </div>
 
-    
-    <div>
-        <label for="pose-sanskrit">Sanskrit name: </label>
-        <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="Sanskrit pose name">
-    </div>
+        <div class="img-container">
+            <img [src]="pose.imageSrc" alt="">
+        </div>
 
-    <div>
-        <label for="pose-english">English name: </label>
-        <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="English pose name">
     </div>
 
     <div>
-        <label for="pose-favorite">Favorite pose? </label>
-        <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite">
-    </div>
+        <h2>Edit Details</h2>
+        <div>
+            <label for="pose-sanskrit">Sanskrit name: </label>
+            <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="Sanskrit pose name">
+        </div>
 
-    <div>
-        <button (click)="goBack()">Go Back</button>
-        <button (click)="save()">Save</button>
+        <div>
+            <label for="pose-english">English name: </label>
+            <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="English pose name">
+        </div>
+
+        <div>
+            <label for="pose-favorite">Favorite pose? </label>
+            <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite">
+        </div>
+
+        <div>
+            <button (click)="goBack()">Go Back</button>
+            <button (click)="save()">Save</button>
+        </div>
     </div>
 </section>
