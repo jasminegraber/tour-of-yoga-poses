@@ -4,9 +4,10 @@
         >
 
         <div class="pose-container" (dblclick)="onToggle(pose)">
-            <h2>Pose Details</h2>
-            <p>Sanskrit: {{ pose.sanskritName }}</p>
-            <p>English: {{ pose.englishName }}</p>
+            <h2>{{ pose.sanskritName }}</h2>
+            <p class="pose-name">Sanskrit</p>
+            <h2>{{ pose.englishName }}</h2>
+            <p class="pose-name">English</p>
             <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose"></fa-icon>
         </div>
 
