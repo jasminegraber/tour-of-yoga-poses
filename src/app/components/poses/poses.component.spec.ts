@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { PosesComponent } from './poses.component';
 
 describe('PosesComponent', () => {
@@ -8,7 +8,10 @@ describe('PosesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PosesComponent ]
+      declarations: [ PosesComponent ],
+      imports: [
+        HttpClientModule
+      ]
     })
     .compileComponents();
   });

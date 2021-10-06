@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PoseSearchComponent } from './pose-search.component';
@@ -8,7 +9,10 @@ describe('PoseSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PoseSearchComponent ]
+      declarations: [ PoseSearchComponent ],
+      imports: [
+        HttpClientModule
+      ]
     })
     .compileComponents();
   });

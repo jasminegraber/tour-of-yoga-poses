@@ -6,8 +6,6 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import { PoseService } from 'src/app/services/pose.service';
 
-;
-
 @Component({
   selector: 'app-pose-detail',
   templateUrl: './pose-detail.component.html',
@@ -15,7 +13,15 @@ import { PoseService } from 'src/app/services/pose.service';
 })
 export class PoseDetailComponent implements OnInit {
 
-  @Input() pose!: Pose;
+  pose: Pose = {
+    id: -1,
+    englishName: '',
+    sanskritName: '',
+    favorite: true,
+    imageSrc: '',
+    altText: ''
+  }
+
   @Output() onToggleFavorite: EventEmitter<Pose> = new EventEmitter();
 
   faHeart = faHeart;

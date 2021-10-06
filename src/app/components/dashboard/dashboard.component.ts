@@ -11,7 +11,8 @@ export class DashboardComponent implements OnInit {
 
   poses: Pose[] = [];
 
-  constructor(private poseService: PoseService) { }
+  constructor(private poseService: PoseService) { 
+  }
 
   ngOnInit(): void {
     this.getPoses();
