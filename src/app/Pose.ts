@@ -4,4 +4,5 @@ export interface Pose {
     sanskritName: string;
     favorite: boolean;
     imageSrc: string;
+    altText: string;
   }
