@@ -45,6 +45,6 @@ describe('PoseDetailComponent', () => {
     const poseSpy = spyOn(poseService, "getPose").and.returnValue(of(mockPose));
     component.ngOnInit();
     expect(component).toBeTruthy();
-    expect(poseSpy).toHaveBeenCalled()
+    expect(poseSpy).toHaveBeenCalled();
   });
 });

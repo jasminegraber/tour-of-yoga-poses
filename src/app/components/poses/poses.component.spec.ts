@@ -3,7 +3,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { PosesComponent } from './poses.component';
 import { PoseService } from 'src/app/services/pose.service';
 import { of } from 'rxjs';
-import { componentFactoryName } from '@angular/compiler';
 
 describe('PosesComponent', () => {
   let component: PosesComponent;
