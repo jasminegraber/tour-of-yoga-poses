@@ -87,11 +87,34 @@
       text-align: center;
   }
 
-  section {
-      display: flex;
-      margin-top: 80px;
+  // section {
+  //     display: flex;
+  //     margin-top: 80px;
+  // }
+
+  div > img {
+    max-width: 200px;
   }
 
+
+  .yoga-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .pose-container {
+    margin: 20px;
+  }
+
+  .text-delete {
+    text-align: center;
+  }
+
+  fa-icon {
+    display: block;
+  }
   
   
 

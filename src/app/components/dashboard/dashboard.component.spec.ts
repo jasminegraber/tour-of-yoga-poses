@@ -48,8 +48,5 @@ describe('DashboardComponent', () => {
     expect(component).toBeTruthy();
     expect(poseSpy).toHaveBeenCalled();
     });
-
-
-
   });
 });

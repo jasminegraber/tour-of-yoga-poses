@@ -1,18 +1,23 @@
 
 <section role="main">
+    <h2>Great Poses</h2>
 
-    <div>
-        <h2>Great Poses</h2>
-        <ul class="poses">
-            <li *ngFor="let pose of poses">
-                <a routerLink="/detail/{{pose.id}}">
-                    <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
-                </a>
-                <button 
-                class="delete" title="delete pose"
-                (click)="delete(pose)">x</button>
-            </li>
-        </ul>
+    <div class="yoga-container">
+        
+        <!-- <ul class="poses"> -->
+            <div *ngFor="let pose of poses" class="pose-container">
+                <img src="{{pose.imageSrc}}" alt="">
+                <div class="text-delete">
+                    <a routerLink="/detail/{{pose.id}}">
+                        <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
+                        </a>
+                    <fa-icon [icon]="faTrashAlt" (click)="delete(pose)"></fa-icon>
+                </div>
+                    <!-- <button 
+                    class="delete" title="delete pose"
+                    (click)="delete(pose)">x</button> -->
+            </div>
+        <!-- </ul> -->
     </div>
 
     <div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pose } from 'src/app/Pose';
 import { PoseService } from 'src/app/services/pose.service';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,8 +11,8 @@ import { PoseService } from 'src/app/services/pose.service';
 })
 export class PosesComponent implements OnInit {
 
+  faTrashAlt = faTrashAlt;
   poses: Pose[] = [];
-  selectedPose?: Pose;
 
   constructor(private poseService: PoseService) { }
 
