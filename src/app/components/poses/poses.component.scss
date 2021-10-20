@@ -1,127 +1,29 @@
-/* HeroesComponent's private CSS styles */
-.poses {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
-}
-.poses li {
-  position: relative;
-  cursor: pointer;
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.poses li:hover {
-  left: .1em;
+img {
+  max-width: 250px;
 }
 
-.poses a {
-  color: #333;
-  text-decoration: none;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
+fa-icon {
   display: block;
-  width: 100%;
 }
 
-.poses a:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
-}
-
-.poses a:active {
-  background-color: #525252;
-  color: #fafafa;
-}
-
-.poses .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
-
-.add-button {
-  padding: .5rem 1.5rem;
-  font-size: 1rem;
-  margin-bottom: 2rem;
- }
- 
- .add-button:hover {
-   color: white;
-   background-color: #42545C;
- }
- 
- button.delete {
-   position: absolute;
-   left: 210px;
-   top: 5px;
-   background-color: white;
-   color:  #525252;
-   font-size: 1.1rem;
-   padding: 1px 10px 3px 10px;
- }
- 
- button.delete:hover {
-   background-color: #525252;
-   color: white;
- }
-  
-  input {
-    padding: .5rem;
+.yoga-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   }
 
-  h2 {
-      text-align: center;
+.pose-container {
+  margin: 20px;
   }
 
-  // section {
-  //     display: flex;
-  //     margin-top: 80px;
-  // }
-
-  li > img {
-    max-width: 200px;
+.text-delete {
+  text-align: center;
   }
 
-
-  .yoga-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .pose-container {
-    margin: 20px;
-  }
-
-  .text-delete {
-    text-align: center;
-  }
-
-  fa-icon {
-    display: block;
-  }
-  
-  
-
-@media (max-width: 768px) {
-
-
-  section {
-    flex-direction: column;
-  }
-}
