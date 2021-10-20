@@ -40,7 +40,7 @@ export class PoseDetailComponent implements OnInit {
   getPose(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.poseService.getPose(id)
-        .subscribe(pose => this.pose = pose);
+      .subscribe(pose => this.pose = pose);
   }
 
   goBack(): void {
@@ -50,7 +50,7 @@ export class PoseDetailComponent implements OnInit {
   save(): void {
     if (this.pose) {
       this.poseService.updatePose(this.pose)
-        .subscribe(); // () => this.goBack()
+        .subscribe();
     }
   }
 

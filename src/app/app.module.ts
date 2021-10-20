@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PoseSearchComponent } from './components/pose-search/pose-search.component';
+import { CreatePoseComponent } from './components/create-pose/create-pose.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PoseSearchComponent } from './components/pose-search/pose-search.compon
     MessagesComponent,
     DashboardComponent,
     NavComponent,
-    PoseSearchComponent
+    PoseSearchComponent,
+    CreatePoseComponent
   ],
   imports: [
     HttpClientModule,
@@ -36,6 +38,7 @@ import { PoseSearchComponent } from './components/pose-search/pose-search.compon
     ),
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule
   ],

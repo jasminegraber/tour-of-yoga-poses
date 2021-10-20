@@ -21,7 +21,7 @@ export class PoseService {
     private messageService: MessageService) { }
 
   /** POST: add a new pose to the server */
-  create(pose: Pose): Observable<Pose> {
+  addPose(pose: Pose): Observable<Pose> {
     return this.http.post<Pose>(this.posesUrl, pose, this.httpOptions).pipe(
       tap((newPose: Pose) => this.log(`added pose w/ id=${newPose.id}`)),
       catchError(this.handleError<Pose>('addPose'))
@@ -59,7 +59,7 @@ export class PoseService {
     );
   }
 
-/** PUT: update the pose on the server */
+  /** PUT: update the pose on the server */
   updatePose(pose: Pose): Observable<any> {
     return this.http.put(this.posesUrl, pose, this.httpOptions).pipe(
       tap(_ => this.log(`updated pose id=${pose.id}`)),
@@ -95,7 +95,7 @@ export class PoseService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
-}
+  }
 
   private log(message: string) {
     this.messageService.add(`PoseService: ${message}`);

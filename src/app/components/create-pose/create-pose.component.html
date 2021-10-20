@@ -1,0 +1,15 @@
+<section>
+    <form [formGroup]="newPose">
+        <label for="english-name">English pose name:</label>
+        <input type="text" id="english-name" formControlName="englishName">
+        <label for="sanskrit-name">Sanskrit pose name:</label>
+        <input type="text" id="sanskrit-name" formControlName="sanskritName">
+        <label for="favorite-pose">Favorite pose?</label>
+        <input type="checkbox" id="favorite-pose" formControlName="favorite">
+        <label for="img-src">Pose image URL:</label>
+        <input type="text" id="img-src" formControlName="imageSrc">
+        <label for="img-alt">Pose image description:</label>
+        <input type="text" id="img-alt" formControlName="altText">
+        <button (click)="add()">Add Yoga Pose</button>
+    </form>
+</section>

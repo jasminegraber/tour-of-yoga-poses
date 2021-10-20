@@ -1,41 +1,33 @@
 <section>
 
-    <div *ngIf="pose" role="main"
-         class="container"
-        >
-
+    <div *ngIf="pose" role="main" class="container">
         <div class="pose-container" (dblclick)="onToggle(pose)">
-            <h2>{{ pose.sanskritName }}</h2>
+            <h2 lang="sa">{{ pose.sanskritName }}</h2>
             <p class="pose-name">Sanskrit</p>
             <h2>{{ pose.englishName }}</h2>
             <p class="pose-name">English</p>
-            <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose"></fa-icon>
+            <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose">
+            </fa-icon>
         </div>
-
         <div class="img-container">
             <img [src]="pose.imageSrc" alt="{{pose.altText}}">
         </div>
-
     </div>
 
     <div class="edit-details">
         <h2>Edit Details</h2>
-
         <div class="form-container sanskrit-container">
             <label for="pose-sanskrit">Sanskrit name </label>
             <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="Sanskrit pose name">
         </div>
-
         <div class="form-container">
             <label for="pose-english">English name </label>
             <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="English pose name">
         </div>
-
         <div class="checkbox-container">
             <label for="pose-favorite">Favorite pose? </label>
             <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite">
         </div>
-
         <div class="detail-buttons">
             <button (click)="goBack()">Go Back</button>
             <button (click)="save()">Save</button>

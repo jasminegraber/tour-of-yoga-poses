@@ -1,37 +1,33 @@
-
 <section role="main">
     <h2>Great Poses</h2>
 
-    <div class="yoga-container">
-        
-        <!-- <ul class="poses"> -->
-            <div *ngFor="let pose of poses" class="pose-container">
-                <img src="{{pose.imageSrc}}" alt="">
-                <div class="text-delete">
-                    <a routerLink="/detail/{{pose.id}}">
-                        <span class="badge">{{pose.id}}</span> {{pose.sanskritName}}
-                        </a>
-                    <fa-icon [icon]="faTrashAlt" (click)="delete(pose)"></fa-icon>
-                </div>
-                    <!-- <button 
-                    class="delete" title="delete pose"
-                    (click)="delete(pose)">x</button> -->
-            </div>
-        <!-- </ul> -->
-    </div>
+    <a routerLink="/create"><button>Add New Pose</button></a>
 
-    <div>
+    <ul class="yoga-container">
+        <li *ngFor="let pose of poses" class="pose-container">
+            <img src="{{pose.imageSrc}}" alt="">
+            <div class="text-delete">
+                <a routerLink="/detail/{{pose.id}}">
+                    <span class="badge">{{pose.id}}</span> - <span lang="sa">{{pose.sanskritName}}</span>
+                </a>
+                <fa-icon [icon]="faTrashAlt" (click)="delete(pose)" title="delete pose"></fa-icon>
+            </div>
+        </li>
+    </ul>
+
+
+
+    <!-- <div>
         <label for="english-name">English name: </label>
         <input id="english-name" #englishName />
         <label for="sanskrit-name">Sanskrit name: </label>
-        <input id="sanskrit-name" #sanskritName />
-      
-        <!-- (click) passes input value to add() and then clears the input -->
-        <button class="add-button" (click)="create(sanskritName.value, englishName.value); englishName.value=''; sanskritName.value=''">
-          Add pose
+        <input id="sanskrit-name" #sanskritName />      
+        <button class="add-button"
+            (click)="create(sanskritName.value, englishName.value); englishName.value=''; sanskritName.value=''">
+            Add pose
         </button>
-      </div>
+    </div> -->
 
-    <!-- <app-pose-detail [pose]="selectedPose"></app-pose-detail> -->
+    <!-- (click) passes input value to add() and then clears the input -->
 
 </section>
