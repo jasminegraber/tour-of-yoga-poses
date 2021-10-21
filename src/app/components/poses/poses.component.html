@@ -1,4 +1,28 @@
-<section role="main">
+<section class="d-flex flex-column align-items-center">
+    <h2>Great Poses</h2>
+    <a routerLink="/create" class="btn btn-info btn-lg m-3">Add New Pose</a>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card row m-3" style="width: 18rem;" *ngFor="let pose of poses">
+                <fa-icon [icon]="faTrashAlt" (click)="delete(pose)" title="delete pose" class="mt-3"></fa-icon>
+                <img src="{{pose.imageSrc}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{pose.sanskritName}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{pose.englishName}} - {{pose.id}}</h6>
+                    <a routerLink="/detail/{{pose.id}}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- <section role="main">
     <h2>Great Poses</h2>
 
     <a routerLink="/create"><button>Add New Pose</button></a>
@@ -7,27 +31,11 @@
         <li *ngFor="let pose of poses" class="pose-container">
             <img src="{{pose.imageSrc}}" alt="">
             <div class="text-delete">
-                <a routerLink="/detail/{{pose.id}}">
+                <a routerLink="/detail/{{pose.id}}" class="btn btn-primary">
                     <span class="badge">{{pose.id}}</span> - <span lang="sa">{{pose.sanskritName}}</span>
                 </a>
                 <fa-icon [icon]="faTrashAlt" (click)="delete(pose)" title="delete pose"></fa-icon>
             </div>
         </li>
     </ul>
-
-
-
-    <!-- <div>
-        <label for="english-name">English name: </label>
-        <input id="english-name" #englishName />
-        <label for="sanskrit-name">Sanskrit name: </label>
-        <input id="sanskrit-name" #sanskritName />      
-        <button class="add-button"
-            (click)="create(sanskritName.value, englishName.value); englishName.value=''; sanskritName.value=''">
-            Add pose
-        </button>
-    </div> -->
-
-    <!-- (click) passes input value to add() and then clears the input -->
-
-</section>
+</section> -->
