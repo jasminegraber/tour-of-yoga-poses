@@ -8,7 +8,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { PosesComponent } from './components/poses/poses.component';
 import { PoseDetailComponent } from './components/pose-detail/pose-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
@@ -22,7 +21,6 @@ import { CreatePoseComponent } from './components/create-pose/create-pose.compon
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     PosesComponent,
     PoseDetailComponent,
     MessagesComponent,

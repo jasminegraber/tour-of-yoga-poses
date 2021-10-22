@@ -1,4 +1,63 @@
-<section>
+<section class="d-flex flex-row align-items-center justify-content-center">
+
+    <div class="card bg-light w-50 margin align-items-center" style="width: 18rem;" *ngIf="pose"
+        (dblclick)="onToggle(pose)">
+        <img class="card-img-top" [src]="pose.imageSrc" [alt]="pose.altText">
+        <div class="card-body ">
+            <h5 class="card-title text-center m-0" lang="sa">{{ pose.sanskritName }}</h5>
+            <h6 class="card-subtitle text-muted text-center" lang="sa">{{ pose.englishName }}</h6>
+            <p class="w-75 mx-auto text-center">{{ pose.benefits }}</p>
+            <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose"
+                class="display-5">
+            </fa-icon>
+        </div>
+    </div>
+
+    <div class="w-50">
+        <h2 class="mb-4">Edit Details</h2>
+        <div class="d-flex flex-column align-content-center justify-content-center w-75">
+            <div class="form-group">
+                <label for="pose-sanskrit">Sanskrit name</label>
+                <input type="text" class="form-control" id="pose-sanskrit" aria-describedby="sanskritName"
+                    placeholder="Sanskrit Pose Name" [(ngModel)]="pose.sanskritName">
+            </div>
+            <div class="form-group mt-3">
+                <label for="pose-english">English name</label>
+                <input type="text" class="form-control" id="pose-english" aria-describedby="englishName"
+                    placeholder="English Pose Name" [(ngModel)]="pose.englishName">
+            </div>
+            <div class="form-group mt-3">
+                <label for="pose-benefits">Benefits</label>
+                <textarea class="form-control" id="pose-benefits" aria-describedby="benefits"
+                    placeholder="Pose Benefits" [(ngModel)]="pose.benefits" rows="3"></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <label for="img-url">Image URL</label>
+                <input type="text" class="form-control" id="img-url" aria-describedby="imgURL"
+                    placeholder="Pose Image URL" [(ngModel)]="pose.imageSrc">
+            </div>
+            <div class="form-group my-3">
+                <label for="img-desc">Alt Text</label>
+                <input type="text" class="form-control" id="img-desc" aria-describedby="imgDesc"
+                    placeholder="Alternative text for image" [(ngModel)]="pose.altText">
+            </div>
+            <div class="form-group form-check">
+                <label for="pose-favorite" class="form-check-label">Favorite</label>
+                <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite" class="form-check-input">
+            </div>
+            <div>
+                <button (click)="save()" class="btn btn-primary">Save</button>
+                <button (click)="goBack()" class="btn btn-secondary m-2">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- <section>
 
     <div *ngIf="pose" role="main" class="container">
         <div class="pose-container" (dblclick)="onToggle(pose)">
@@ -14,23 +73,5 @@
         </div>
     </div>
 
-    <div class="edit-details">
-        <h2>Edit Details</h2>
-        <div class="form-container sanskrit-container">
-            <label for="pose-sanskrit">Sanskrit name </label>
-            <input id="pose-sanskrit" [(ngModel)]="pose.sanskritName" placeholder="Sanskrit pose name">
-        </div>
-        <div class="form-container">
-            <label for="pose-english">English name </label>
-            <input id="pose-english" [(ngModel)]="pose.englishName" placeholder="English pose name">
-        </div>
-        <div class="checkbox-container">
-            <label for="pose-favorite">Favorite pose? </label>
-            <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite">
-        </div>
-        <div class="detail-buttons">
-            <button (click)="goBack()">Go Back</button>
-            <button (click)="save()">Save</button>
-        </div>
-    </div>
-</section>
+   
+</section> -->

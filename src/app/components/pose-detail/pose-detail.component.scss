@@ -1,78 +1,29 @@
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.margin {
+    margin: 100px !important;
 }
 
-h2,
-.pose-container {
-    text-align: center;
+
+.benefits {
+    margin: 0 !important;
 }
 
-.pose-container {
-    padding: 30px;
-    user-select: none;
-    background-color: #EEE;
-}
-
-h3 {
-    font-size: 2em;
-}
-
-.pose-container > h2 {
-    margin-bottom: 0;
-}
-
-.pose-name {
-    font-family: 'Cormorant', serif;
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-fa-icon {
-    color: #FFF;
-    display: block;
-    font-size: 2em;
+p {
+    margin-top: 20px;
 }
 
 .favorite {
-    color: red;
+    color: red !important;
 }
 
-img {
-    max-width: 500px;
+[class^="fa-"], [class*="fa-"] {
+    display: inline-block;
+    width: 100%;
+    text-align: center !important;
+    color: white;
 }
 
-.edit-details {
-    padding: 20px;
-}
-
-.form-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+div {
+    user-select: none;
 }
 
 
-.sanskrit-container {
-    margin-bottom: 20px;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-}
-
-input {
-    background-color: #EEE;
-    border: 0;
-    border-radius: 5px;
-    height: 50px;
-}
-
-input:focus {
-    outline: none; 
-    border: 3px solid #c6e48a;
-    background-color: #fff;
-    transition: background-color 0.25s ease-out;
-}

@@ -17,6 +17,7 @@ export class PoseDetailComponent implements OnInit {
     id: -1,
     englishName: '',
     sanskritName: '',
+    benefits: '',
     favorite: true,
     imageSrc: '',
     altText: ''

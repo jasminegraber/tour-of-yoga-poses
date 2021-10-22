@@ -1,8 +1,9 @@
 export interface Pose {
-    id: number;
-    englishName: string;
-    sanskritName: string;
-    favorite: boolean;
-    imageSrc: string;
-    altText: string;
-  }
+  id: number;
+  sanskritName: string;
+  englishName: string;
+  benefits: string;
+  favorite: boolean;
+  imageSrc: string;
+  altText: string;
+}
