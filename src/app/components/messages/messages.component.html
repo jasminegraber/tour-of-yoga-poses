@@ -1,8 +1,8 @@
-<div *ngIf="messageService.messages.length" role="contentinfo">
-
-    <h2>Messages</h2>
-    <button class="clear"
-            (click)="messageService.clear()">Clear messages</button>
-    <div *ngFor='let message of messageService.messages'> {{message}} </div>
-  
-  </div>
+<div *ngIf="messageService.messages.length" role="contentinfo" class="card m-4 w-50 mx-auto">
+        <div class="card-body d-flex flex-column align-items-center">
+                <h2 class="card-title display-6">Messages</h2>
+                <button class="btn btn-danger" (click)="messageService.clear()">Clear
+                        messages</button>
+                <div *ngFor='let message of messageService.messages'> {{message}} </div>
+        </div>
+</div>

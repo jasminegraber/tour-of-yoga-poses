@@ -20,6 +20,7 @@ export class CreatePoseComponent implements OnInit {
   newPose = new FormGroup({
     englishName: new FormControl(''),
     sanskritName: new FormControl(''),
+    benefits: new FormControl(''),
     favorite: new FormControl(false),
     imageSrc: new FormControl(''),
     altText: new FormControl('')
@@ -29,6 +30,7 @@ export class CreatePoseComponent implements OnInit {
     let pose = {
       englishName: this.newPose.controls.englishName.value,
       sanskritName: this.newPose.controls.sanskritName.value,
+      benefits: this.newPose.controls.benefits.value,
       favorite: this.newPose.controls.favorite.value,
       imageSrc: this.newPose.controls.imageSrc.value,
       altText: this.newPose.controls.altText.value
