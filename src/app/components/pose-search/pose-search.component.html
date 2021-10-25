@@ -1,14 +1,14 @@
 <div id="search-component">
-  
-    <label for="search-box">Pose Search</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-  
-    <ul class="search-result">
-      <li *ngFor="let pose of poses$ | async" >
-        <a routerLink="/detail/{{pose.id}}">
-          {{ pose.sanskritName }}
-        </a>
-      </li>
-    </ul>
 
-  </div>
+  <label for="search-box">Search</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let pose of poses$ | async">
+      <a routerLink="/detail/{{pose.id}}">
+        {{ pose.sanskritName }} - {{ pose.englishName}}
+      </a>
+    </li>
+  </ul>
+
+</div>

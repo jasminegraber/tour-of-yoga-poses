@@ -2,6 +2,7 @@
     background: url('../../../assets/images/yoga-woman-banner.jpg'), black;
     background-position: center; 
     height: 400px;
+    position: relative;
 }
 
 h1,
@@ -11,3 +12,11 @@ p {
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
 }
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
