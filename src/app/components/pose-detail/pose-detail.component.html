@@ -1,11 +1,11 @@
-<section class="d-flex flex-row align-items-center justify-content-center">
+<section class="d-flex flex-row align-items-center justify-content-center" role="main">
 
     <div class="card bg-light w-50 margin align-items-center" style="width: 18rem;" *ngIf="pose"
         (dblclick)="onToggle(pose)">
-        <img class="card-img-top" [src]="pose.imageSrc" [alt]="pose.altText">
+        <img class="card-img-top" [src]="pose.imageSrc" [alt]="pose.altText" role="img">
         <div class="card-body ">
-            <h5 class="card-title text-center m-0" lang="sa">{{ pose.sanskritName }}</h5>
-            <h6 class="card-subtitle text-muted text-center" lang="sa">{{ pose.englishName }}</h6>
+            <h2 class="card-title text-center m-0 fs-4" lang="sa">{{ pose.sanskritName }}</h2>
+            <h3 class="card-subtitle text-muted text-center fs-5" lang="sa">{{ pose.englishName }}</h3>
             <p class="w-75 mx-auto text-center">{{ pose.benefits }}</p>
             <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose"
                 class="display-5">
@@ -14,64 +14,41 @@
     </div>
 
     <div class="w-50">
-        <h2 class="mb-4">Edit Details</h2>
+        <h2 class="mb-4 display-6">Edit Details</h2>
         <div class="d-flex flex-column align-content-center justify-content-center w-75">
             <div class="form-group">
                 <label for="pose-sanskrit">Sanskrit name</label>
-                <input type="text" class="form-control" id="pose-sanskrit" aria-describedby="sanskritName"
-                    placeholder="Sanskrit Pose Name" [(ngModel)]="pose.sanskritName">
+                <input type="text" class="form-control" id="pose-sanskrit" placeholder="Sanskrit Pose Name"
+                    [(ngModel)]="pose.sanskritName">
             </div>
             <div class="form-group mt-3">
                 <label for="pose-english">English name</label>
-                <input type="text" class="form-control" id="pose-english" aria-describedby="englishName"
-                    placeholder="English Pose Name" [(ngModel)]="pose.englishName">
+                <input type="text" class="form-control" id="pose-english" placeholder="English Pose Name"
+                    [(ngModel)]="pose.englishName">
             </div>
             <div class="form-group mt-3">
                 <label for="pose-benefits">Benefits</label>
-                <textarea class="form-control" id="pose-benefits" aria-describedby="benefits"
-                    placeholder="Pose Benefits" [(ngModel)]="pose.benefits" rows="3"></textarea>
+                <textarea class="form-control" id="pose-benefits" placeholder="Pose Benefits"
+                    [(ngModel)]="pose.benefits" rows="3"></textarea>
             </div>
             <div class="form-group mt-3">
                 <label for="img-url">Image URL</label>
-                <input type="text" class="form-control" id="img-url" aria-describedby="imgURL"
-                    placeholder="Pose Image URL" [(ngModel)]="pose.imageSrc">
+                <input type="text" class="form-control" id="img-url" placeholder="Pose Image URL"
+                    [(ngModel)]="pose.imageSrc">
             </div>
             <div class="form-group my-3">
                 <label for="img-desc">Alt Text</label>
-                <input type="text" class="form-control" id="img-desc" aria-describedby="imgDesc"
-                    placeholder="Alternative text for image" [(ngModel)]="pose.altText">
+                <input type="text" class="form-control" id="img-desc" placeholder="Alternative text for image"
+                    [(ngModel)]="pose.altText">
             </div>
             <div class="form-group form-check">
                 <label for="pose-favorite" class="form-check-label">Favorite</label>
                 <input type="checkbox" id="pose-favorite" [(ngModel)]="pose.favorite" class="form-check-input">
             </div>
             <div>
-                <button (click)="save()" class="btn btn-primary">Save</button>
+                <button (click)="save()" class="btn btn-warning">Save</button>
                 <button (click)="goBack()" class="btn btn-secondary m-2">Go Back</button>
             </div>
         </div>
     </div>
-
 </section>
-
-
-
-
-<!-- <section>
-
-    <div *ngIf="pose" role="main" class="container">
-        <div class="pose-container" (dblclick)="onToggle(pose)">
-            <h2 lang="sa">{{ pose.sanskritName }}</h2>
-            <p class="pose-name">Sanskrit</p>
-            <h2>{{ pose.englishName }}</h2>
-            <p class="pose-name">English</p>
-            <fa-icon [icon]="faHeart" [ngClass]="{ favorite: pose.favorite }" title="Double click to favorite pose">
-            </fa-icon>
-        </div>
-        <div class="img-container">
-            <img [src]="pose.imageSrc" [alt]="pose.altText">
-        </div>
-    </div>
-
-   
-</section> -->

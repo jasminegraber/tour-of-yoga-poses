@@ -16,6 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PoseSearchComponent } from './components/pose-search/pose-search.component';
 import { CreatePoseComponent } from './components/create-pose/create-pose.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CreatePoseComponent } from './components/create-pose/create-pose.compon
     DashboardComponent,
     NavComponent,
     PoseSearchComponent,
-    CreatePoseComponent
+    CreatePoseComponent,
+    BannerComponent
   ],
   imports: [
     HttpClientModule,
