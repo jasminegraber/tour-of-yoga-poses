@@ -1,7 +1,6 @@
-<section class="d-flex flex-row align-items-center justify-content-center" role="main">
+<section class="d-flex flex-row align-items-center justify-content-center mx-auto w-75 my-5" role="main">
 
-    <div class="card bg-light w-50 margin align-items-center" style="width: 18rem;" *ngIf="pose"
-        (dblclick)="onToggle(pose)">
+    <div class="w-50 card bg-light align-items-center" style="width: 18rem;" *ngIf="pose" (dblclick)="onToggle(pose)">
         <img class="card-img-top" [src]="pose.imageSrc" [alt]="pose.altText" role="img">
         <div class="card-body ">
             <h2 class="card-title text-center m-0 fs-4" lang="sa">{{ pose.sanskritName }}</h2>
@@ -13,7 +12,7 @@
         </div>
     </div>
 
-    <div class="w-50">
+    <div class="w-50 margin">
         <h2 class="mb-4 display-6">Edit Details</h2>
         <div class="d-flex flex-column align-content-center justify-content-center w-75">
             <div class="form-group">
